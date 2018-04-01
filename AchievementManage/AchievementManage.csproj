@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FDA15A82-59C9-4073-9E9B-903D86CA54E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AchievementManage</RootNamespace>
+    <AssemblyName>AchievementManage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.Excel">
+      <HintPath>Excel_DLL\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <HintPath>Excel_DLL\Interop.Microsoft.Office.Core.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VBIDE">
+      <HintPath>Excel_DLL\Interop.VBIDE.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAchievementAddByFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAchievementAddByFile.Designer.cs">
+      <DependentUpon>frmAchievementAddByFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAchievementAddByWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAchievementAddByWrite.Designer.cs">
+      <DependentUpon>frmAchievementAddByWrite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAchievementSearchComplex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAchievementSearchComplex.Designer.cs">
+      <DependentUpon>frmAchievementSearchComplex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAchievementSearchEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAchievementSearchEasy.Designer.cs">
+      <DependentUpon>frmAchievementSearchEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAchievementUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAchievementUpdate.Designer.cs">
+      <DependentUpon>frmAchievementUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnectToServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnectToServer.Designer.cs">
+      <DependentUpon>frmConnectToServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMechanicalDrawing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMechanicalDrawing.Designer.cs">
+      <DependentUpon>frmMechanicalDrawing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyData.cs" />
+    <Compile Include="MyDatabase.cs" />
+    <Compile Include="MyExcel.cs" />
+    <Compile Include="MyTxt.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAchievementAddByFile.resx">
+      <DependentUpon>frmAchievementAddByFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAchievementAddByWrite.resx">
+      <DependentUpon>frmAchievementAddByWrite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAchievementSearchComplex.resx">
+      <DependentUpon>frmAchievementSearchComplex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAchievementSearchEasy.resx">
+      <DependentUpon>frmAchievementSearchEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAchievementUpdate.resx">
+      <DependentUpon>frmAchievementUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnectToServer.resx">
+      <DependentUpon>frmConnectToServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMechanicalDrawing.resx">
+      <DependentUpon>frmMechanicalDrawing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
